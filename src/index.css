@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+input[type=checkbox]+label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox]+label:before {
+  content: "\2713";
+  border: 2px solid #A9B5DA;
+  border-radius: 0.1em;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  padding-left: 0.2em;
+  padding-bottom: 0.3em;
+  display: flex;
+  align-items: center;
+  margin-right: 0.2em;
+  vertical-align: bottom;
+  color: transparent;
+  transition: .2s;
+}
+
+
+/* input[type=checkbox]+label:active:before {
+  transform: scale(0);
+} */
+
+input[type=checkbox]:checked+label:before {
+  background-color: #814EE7;
+  border-color: #814EE7;
+  color: #fff;
+}
